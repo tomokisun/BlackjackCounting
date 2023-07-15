@@ -1,2 +1,8 @@
-.bundle
-vendor
+.DS_Store
+**/.build
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
