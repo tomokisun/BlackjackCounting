@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 import ComposableArchitecture
 
 public struct Root: ReducerProtocol {
@@ -26,6 +27,7 @@ public struct Root: ReducerProtocol {
 
 public struct RootView: View {
   var store: StoreOf<Root>
+  @Environment(\.requestReview) var requestReview
   
   public init(store: StoreOf<Root>) {
     self.store = store
@@ -34,6 +36,9 @@ public struct RootView: View {
   public var body: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
       CounterView(store: store.scope(state: \.counter, action: Root.Action.counter))
+        .task {
+          requestReview()
+        }
         .toolbar {
           NavigationLink(
             destination: AboutView(
