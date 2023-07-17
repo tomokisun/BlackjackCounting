@@ -1,4 +1,5 @@
 import SwiftUI
+import Analytics
 import PokerHands
 import ComposableArchitecture
 
@@ -12,20 +13,28 @@ public struct Counter: ReducerProtocol {
     case resetButtonTapped
   }
   
+  @Dependency(\.analytics.logEvent) var logEvent
+  
   public var body: some ReducerProtocol<State, Action> {
     Reduce { state, action in
       switch action {
       case .incrementButtonTapped:
         state.count += 1
-        return .none
+        return .run { _ in
+          logEvent(("tap_count_increment", nil))
+        }
 
       case .decrementButtonTapped:
         state.count -= 1
-        return .none
+        return .run { _ in
+          logEvent(("tap_count_decrement", nil))
+        }
 
       case .resetButtonTapped:
         state.count = 0
-        return .none
+        return .run { _ in
+          logEvent(("tap_count_reset", nil))
+        }
       }
     }
   }
