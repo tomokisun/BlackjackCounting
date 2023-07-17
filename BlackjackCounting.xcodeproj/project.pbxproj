@@ -11,6 +11,7 @@
 		B7E79DEF2A63409F009EB951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E79DEE2A63409F009EB951 /* Assets.xcassets */; };
 		B7E79DF22A63409F009EB951 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E79DF12A63409F009EB951 /* Preview Assets.xcassets */; };
 		B7E79DF72A6340AE009EB951 /* BlackjackCountingCore in Frameworks */ = {isa = PBXBuildFile; productRef = B7E79DF62A6340AE009EB951 /* BlackjackCountingCore */; };
+		B7E79E482A651150009EB951 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E79E472A651150009EB951 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B7E79DF12A63409F009EB951 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B7E79DF82A6342F9009EB951 /* Package */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Package; sourceTree = "<group>"; };
 		B7E79DF92A634C8C009EB951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B7E79E472A651150009EB951 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		B7E79DE92A63409E009EB951 /* Multiplatform */ = {
 			isa = PBXGroup;
 			children = (
+				B7E79E472A651150009EB951 /* GoogleService-Info.plist */,
 				B7E79DF92A634C8C009EB951 /* Info.plist */,
 				B7E79DEA2A63409E009EB951 /* MultiplatformApp.swift */,
 				B7E79DEE2A63409F009EB951 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			files = (
 				B7E79DF22A63409F009EB951 /* Preview Assets.xcassets in Resources */,
 				B7E79DEF2A63409F009EB951 /* Assets.xcassets in Resources */,
+				B7E79E482A651150009EB951 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
