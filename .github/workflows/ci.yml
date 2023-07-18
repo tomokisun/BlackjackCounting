@@ -8,7 +8,7 @@ env:
 
 jobs:
   version:
-    runs-on: linux-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - run: .github/workflows/scripts/auto-update-version.sh
